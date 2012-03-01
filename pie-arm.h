@@ -1,0 +1,41 @@
+#ifndef __PIE_ARM_H__
+#define __PIE_ARM_H__
+
+enum {
+	R0,
+	R1,
+	R2,
+	R3,
+	R4,
+	R5,
+	R6,
+	R7,
+	R8,
+	R9,
+	R10,
+	R11,
+	R12,
+	R13,
+	R14,
+	R15
+} pie_registers;
+
+enum {
+	EQUAL = 0,
+	NOT_EQUAL,
+	UNSIGNED_HIGHER_OR_EQUAL,
+	UNSIGNED_LOWER,
+	NEGATIVE,
+	POSITIVE_OR_0,
+	OVERFLOW,
+	NO_OVERFLOW,
+	UNSIGNED_HIGHER,
+	UNSIGNED_LOWER_OR_EQUAL,
+	GREATER_OR_EQUAL,
+	LESS_THAN,
+	GREATER_THAN,
+	LESS_OR_EQUAL,
+	ALWAYS
+} pie_condition;
+
+#endif
