@@ -6,7 +6,9 @@ void d_b (
 )
 {
 	**address = (14 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_beq (
 	unsigned int **address,
@@ -14,7 +16,9 @@ void d_beq (
 )
 {
 	**address = (0 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bne (
 	unsigned int **address,
@@ -22,7 +26,9 @@ void d_bne (
 )
 {
 	**address = (1 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bcs (
 	unsigned int **address,
@@ -30,7 +36,9 @@ void d_bcs (
 )
 {
 	**address = (2 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bcc (
 	unsigned int **address,
@@ -38,7 +46,9 @@ void d_bcc (
 )
 {
 	**address = (3 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bmi (
 	unsigned int **address,
@@ -46,7 +56,9 @@ void d_bmi (
 )
 {
 	**address = (4 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bpl (
 	unsigned int **address,
@@ -54,7 +66,9 @@ void d_bpl (
 )
 {
 	**address = (5 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bvs (
 	unsigned int **address,
@@ -62,7 +76,9 @@ void d_bvs (
 )
 {
 	**address = (6 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bvc (
 	unsigned int **address,
@@ -70,7 +86,9 @@ void d_bvc (
 )
 {
 	**address = (7 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bhi (
 	unsigned int **address,
@@ -78,7 +96,9 @@ void d_bhi (
 )
 {
 	**address = (8 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bls (
 	unsigned int **address,
@@ -86,7 +106,9 @@ void d_bls (
 )
 {
 	**address = (9 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bge (
 	unsigned int **address,
@@ -94,7 +116,9 @@ void d_bge (
 )
 {
 	**address = (10 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blt (
 	unsigned int **address,
@@ -102,7 +126,9 @@ void d_blt (
 )
 {
 	**address = (11 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bgt (
 	unsigned int **address,
@@ -110,7 +136,9 @@ void d_bgt (
 )
 {
 	**address = (12 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ble (
 	unsigned int **address,
@@ -118,7 +146,9 @@ void d_ble (
 )
 {
 	**address = (13 << 28) | ((5) << 25) | ((0) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bl (
 	unsigned int **address,
@@ -126,7 +156,9 @@ void d_bl (
 )
 {
 	**address = (14 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bleq (
 	unsigned int **address,
@@ -134,7 +166,9 @@ void d_bleq (
 )
 {
 	**address = (0 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blne (
 	unsigned int **address,
@@ -142,7 +176,9 @@ void d_blne (
 )
 {
 	**address = (1 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blcs (
 	unsigned int **address,
@@ -150,7 +186,9 @@ void d_blcs (
 )
 {
 	**address = (2 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blcc (
 	unsigned int **address,
@@ -158,7 +196,9 @@ void d_blcc (
 )
 {
 	**address = (3 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blmi (
 	unsigned int **address,
@@ -166,7 +206,9 @@ void d_blmi (
 )
 {
 	**address = (4 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blpl (
 	unsigned int **address,
@@ -174,7 +216,9 @@ void d_blpl (
 )
 {
 	**address = (5 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blvs (
 	unsigned int **address,
@@ -182,7 +226,9 @@ void d_blvs (
 )
 {
 	**address = (6 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blvc (
 	unsigned int **address,
@@ -190,7 +236,9 @@ void d_blvc (
 )
 {
 	**address = (7 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blhi (
 	unsigned int **address,
@@ -198,7 +246,9 @@ void d_blhi (
 )
 {
 	**address = (8 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blls (
 	unsigned int **address,
@@ -206,7 +256,9 @@ void d_blls (
 )
 {
 	**address = (9 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blge (
 	unsigned int **address,
@@ -214,7 +266,9 @@ void d_blge (
 )
 {
 	**address = (10 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bllt (
 	unsigned int **address,
@@ -222,7 +276,9 @@ void d_bllt (
 )
 {
 	**address = (11 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blgt (
 	unsigned int **address,
@@ -230,7 +286,9 @@ void d_blgt (
 )
 {
 	**address = (12 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_blle (
 	unsigned int **address,
@@ -238,7 +296,9 @@ void d_blle (
 )
 {
 	**address = (13 << 28) | ((5) << 25) | ((1) << 24) | ((offset_branch & 16777215) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bx (
 	unsigned int **address,
@@ -246,7 +306,9 @@ void d_bx (
 )
 {
 	**address = (14 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxeq (
 	unsigned int **address,
@@ -254,7 +316,9 @@ void d_bxeq (
 )
 {
 	**address = (0 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxne (
 	unsigned int **address,
@@ -262,7 +326,9 @@ void d_bxne (
 )
 {
 	**address = (1 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxcs (
 	unsigned int **address,
@@ -270,7 +336,9 @@ void d_bxcs (
 )
 {
 	**address = (2 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxcc (
 	unsigned int **address,
@@ -278,7 +346,9 @@ void d_bxcc (
 )
 {
 	**address = (3 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxmi (
 	unsigned int **address,
@@ -286,7 +356,9 @@ void d_bxmi (
 )
 {
 	**address = (4 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxpl (
 	unsigned int **address,
@@ -294,7 +366,9 @@ void d_bxpl (
 )
 {
 	**address = (5 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxvs (
 	unsigned int **address,
@@ -302,7 +376,9 @@ void d_bxvs (
 )
 {
 	**address = (6 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxvc (
 	unsigned int **address,
@@ -310,7 +386,9 @@ void d_bxvc (
 )
 {
 	**address = (7 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxhi (
 	unsigned int **address,
@@ -318,7 +396,9 @@ void d_bxhi (
 )
 {
 	**address = (8 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxls (
 	unsigned int **address,
@@ -326,7 +406,9 @@ void d_bxls (
 )
 {
 	**address = (9 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxge (
 	unsigned int **address,
@@ -334,7 +416,9 @@ void d_bxge (
 )
 {
 	**address = (10 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxlt (
 	unsigned int **address,
@@ -342,7 +426,9 @@ void d_bxlt (
 )
 {
 	**address = (11 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxgt (
 	unsigned int **address,
@@ -350,7 +436,9 @@ void d_bxgt (
 )
 {
 	**address = (12 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bxle (
 	unsigned int **address,
@@ -358,7 +446,9 @@ void d_bxle (
 )
 {
 	**address = (13 << 28) | ((1245169) << 4) | ((rn) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adc (
 	unsigned int **address,
@@ -368,7 +458,9 @@ void d_adc (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adceq (
 	unsigned int **address,
@@ -378,7 +470,9 @@ void d_adceq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcne (
 	unsigned int **address,
@@ -388,7 +482,9 @@ void d_adcne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adccs (
 	unsigned int **address,
@@ -398,7 +494,9 @@ void d_adccs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adccc (
 	unsigned int **address,
@@ -408,7 +506,9 @@ void d_adccc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcmi (
 	unsigned int **address,
@@ -418,7 +518,9 @@ void d_adcmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcpl (
 	unsigned int **address,
@@ -428,7 +530,9 @@ void d_adcpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcvs (
 	unsigned int **address,
@@ -438,7 +542,9 @@ void d_adcvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcvc (
 	unsigned int **address,
@@ -448,7 +554,9 @@ void d_adcvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adchi (
 	unsigned int **address,
@@ -458,7 +566,9 @@ void d_adchi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcls (
 	unsigned int **address,
@@ -468,7 +578,9 @@ void d_adcls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcge (
 	unsigned int **address,
@@ -478,7 +590,9 @@ void d_adcge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adclt (
 	unsigned int **address,
@@ -488,7 +602,9 @@ void d_adclt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcgt (
 	unsigned int **address,
@@ -498,7 +614,9 @@ void d_adcgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcle (
 	unsigned int **address,
@@ -508,7 +626,9 @@ void d_adcle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adci (
 	unsigned int **address,
@@ -518,7 +638,9 @@ void d_adci (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcieq (
 	unsigned int **address,
@@ -528,7 +650,9 @@ void d_adcieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcine (
 	unsigned int **address,
@@ -538,7 +662,9 @@ void d_adcine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcics (
 	unsigned int **address,
@@ -548,7 +674,9 @@ void d_adcics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcicc (
 	unsigned int **address,
@@ -558,7 +686,9 @@ void d_adcicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcimi (
 	unsigned int **address,
@@ -568,7 +698,9 @@ void d_adcimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcipl (
 	unsigned int **address,
@@ -578,7 +710,9 @@ void d_adcipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcivs (
 	unsigned int **address,
@@ -588,7 +722,9 @@ void d_adcivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcivc (
 	unsigned int **address,
@@ -598,7 +734,9 @@ void d_adcivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcihi (
 	unsigned int **address,
@@ -608,7 +746,9 @@ void d_adcihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcils (
 	unsigned int **address,
@@ -618,7 +758,9 @@ void d_adcils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcige (
 	unsigned int **address,
@@ -628,7 +770,9 @@ void d_adcige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcilt (
 	unsigned int **address,
@@ -638,7 +782,9 @@ void d_adcilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcigt (
 	unsigned int **address,
@@ -648,7 +794,9 @@ void d_adcigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_adcile (
 	unsigned int **address,
@@ -658,7 +806,9 @@ void d_adcile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((5) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_add (
 	unsigned int **address,
@@ -668,7 +818,9 @@ void d_add (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addeq (
 	unsigned int **address,
@@ -678,7 +830,9 @@ void d_addeq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addne (
 	unsigned int **address,
@@ -688,7 +842,9 @@ void d_addne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addcs (
 	unsigned int **address,
@@ -698,7 +854,9 @@ void d_addcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addcc (
 	unsigned int **address,
@@ -708,7 +866,9 @@ void d_addcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addmi (
 	unsigned int **address,
@@ -718,7 +878,9 @@ void d_addmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addpl (
 	unsigned int **address,
@@ -728,7 +890,9 @@ void d_addpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addvs (
 	unsigned int **address,
@@ -738,7 +902,9 @@ void d_addvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addvc (
 	unsigned int **address,
@@ -748,7 +914,9 @@ void d_addvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addhi (
 	unsigned int **address,
@@ -758,7 +926,9 @@ void d_addhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addls (
 	unsigned int **address,
@@ -768,7 +938,9 @@ void d_addls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addge (
 	unsigned int **address,
@@ -778,7 +950,9 @@ void d_addge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addlt (
 	unsigned int **address,
@@ -788,7 +962,9 @@ void d_addlt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addgt (
 	unsigned int **address,
@@ -798,7 +974,9 @@ void d_addgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addle (
 	unsigned int **address,
@@ -808,7 +986,9 @@ void d_addle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addi (
 	unsigned int **address,
@@ -818,7 +998,9 @@ void d_addi (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addieq (
 	unsigned int **address,
@@ -828,7 +1010,9 @@ void d_addieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addine (
 	unsigned int **address,
@@ -838,7 +1022,9 @@ void d_addine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addics (
 	unsigned int **address,
@@ -848,7 +1034,9 @@ void d_addics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addicc (
 	unsigned int **address,
@@ -858,7 +1046,9 @@ void d_addicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addimi (
 	unsigned int **address,
@@ -868,7 +1058,9 @@ void d_addimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addipl (
 	unsigned int **address,
@@ -878,7 +1070,9 @@ void d_addipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addivs (
 	unsigned int **address,
@@ -888,7 +1082,9 @@ void d_addivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addivc (
 	unsigned int **address,
@@ -898,7 +1094,9 @@ void d_addivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addihi (
 	unsigned int **address,
@@ -908,7 +1106,9 @@ void d_addihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addils (
 	unsigned int **address,
@@ -918,7 +1118,9 @@ void d_addils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addige (
 	unsigned int **address,
@@ -928,7 +1130,9 @@ void d_addige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addilt (
 	unsigned int **address,
@@ -938,7 +1142,9 @@ void d_addilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addigt (
 	unsigned int **address,
@@ -948,7 +1154,9 @@ void d_addigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_addile (
 	unsigned int **address,
@@ -958,7 +1166,9 @@ void d_addile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((4) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_and (
 	unsigned int **address,
@@ -968,7 +1178,9 @@ void d_and (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andeq (
 	unsigned int **address,
@@ -978,7 +1190,9 @@ void d_andeq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andne (
 	unsigned int **address,
@@ -988,7 +1202,9 @@ void d_andne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andcs (
 	unsigned int **address,
@@ -998,7 +1214,9 @@ void d_andcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andcc (
 	unsigned int **address,
@@ -1008,7 +1226,9 @@ void d_andcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andmi (
 	unsigned int **address,
@@ -1018,7 +1238,9 @@ void d_andmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andpl (
 	unsigned int **address,
@@ -1028,7 +1250,9 @@ void d_andpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andvs (
 	unsigned int **address,
@@ -1038,7 +1262,9 @@ void d_andvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andvc (
 	unsigned int **address,
@@ -1048,7 +1274,9 @@ void d_andvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andhi (
 	unsigned int **address,
@@ -1058,7 +1286,9 @@ void d_andhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andls (
 	unsigned int **address,
@@ -1068,7 +1298,9 @@ void d_andls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andge (
 	unsigned int **address,
@@ -1078,7 +1310,9 @@ void d_andge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andlt (
 	unsigned int **address,
@@ -1088,7 +1322,9 @@ void d_andlt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andgt (
 	unsigned int **address,
@@ -1098,7 +1334,9 @@ void d_andgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andle (
 	unsigned int **address,
@@ -1108,7 +1346,9 @@ void d_andle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andi (
 	unsigned int **address,
@@ -1118,7 +1358,9 @@ void d_andi (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andieq (
 	unsigned int **address,
@@ -1128,7 +1370,9 @@ void d_andieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andine (
 	unsigned int **address,
@@ -1138,7 +1382,9 @@ void d_andine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andics (
 	unsigned int **address,
@@ -1148,7 +1394,9 @@ void d_andics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andicc (
 	unsigned int **address,
@@ -1158,7 +1406,9 @@ void d_andicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andimi (
 	unsigned int **address,
@@ -1168,7 +1418,9 @@ void d_andimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andipl (
 	unsigned int **address,
@@ -1178,7 +1430,9 @@ void d_andipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andivs (
 	unsigned int **address,
@@ -1188,7 +1442,9 @@ void d_andivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andivc (
 	unsigned int **address,
@@ -1198,7 +1454,9 @@ void d_andivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andihi (
 	unsigned int **address,
@@ -1208,7 +1466,9 @@ void d_andihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andils (
 	unsigned int **address,
@@ -1218,7 +1478,9 @@ void d_andils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andige (
 	unsigned int **address,
@@ -1228,7 +1490,9 @@ void d_andige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andilt (
 	unsigned int **address,
@@ -1238,7 +1502,9 @@ void d_andilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andigt (
 	unsigned int **address,
@@ -1248,7 +1514,9 @@ void d_andigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_andile (
 	unsigned int **address,
@@ -1258,7 +1526,9 @@ void d_andile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((0) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bic (
 	unsigned int **address,
@@ -1268,7 +1538,9 @@ void d_bic (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_biceq (
 	unsigned int **address,
@@ -1278,7 +1550,9 @@ void d_biceq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicne (
 	unsigned int **address,
@@ -1288,7 +1562,9 @@ void d_bicne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_biccs (
 	unsigned int **address,
@@ -1298,7 +1574,9 @@ void d_biccs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_biccc (
 	unsigned int **address,
@@ -1308,7 +1586,9 @@ void d_biccc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicmi (
 	unsigned int **address,
@@ -1318,7 +1598,9 @@ void d_bicmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicpl (
 	unsigned int **address,
@@ -1328,7 +1610,9 @@ void d_bicpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicvs (
 	unsigned int **address,
@@ -1338,7 +1622,9 @@ void d_bicvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicvc (
 	unsigned int **address,
@@ -1348,7 +1634,9 @@ void d_bicvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bichi (
 	unsigned int **address,
@@ -1358,7 +1646,9 @@ void d_bichi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicls (
 	unsigned int **address,
@@ -1368,7 +1658,9 @@ void d_bicls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicge (
 	unsigned int **address,
@@ -1378,7 +1670,9 @@ void d_bicge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_biclt (
 	unsigned int **address,
@@ -1388,7 +1682,9 @@ void d_biclt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicgt (
 	unsigned int **address,
@@ -1398,7 +1694,9 @@ void d_bicgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicle (
 	unsigned int **address,
@@ -1408,7 +1706,9 @@ void d_bicle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bici (
 	unsigned int **address,
@@ -1418,7 +1718,9 @@ void d_bici (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicieq (
 	unsigned int **address,
@@ -1428,7 +1730,9 @@ void d_bicieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicine (
 	unsigned int **address,
@@ -1438,7 +1742,9 @@ void d_bicine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicics (
 	unsigned int **address,
@@ -1448,7 +1754,9 @@ void d_bicics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicicc (
 	unsigned int **address,
@@ -1458,7 +1766,9 @@ void d_bicicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicimi (
 	unsigned int **address,
@@ -1468,7 +1778,9 @@ void d_bicimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicipl (
 	unsigned int **address,
@@ -1478,7 +1790,9 @@ void d_bicipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicivs (
 	unsigned int **address,
@@ -1488,7 +1802,9 @@ void d_bicivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicivc (
 	unsigned int **address,
@@ -1498,7 +1814,9 @@ void d_bicivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicihi (
 	unsigned int **address,
@@ -1508,7 +1826,9 @@ void d_bicihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicils (
 	unsigned int **address,
@@ -1518,7 +1838,9 @@ void d_bicils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicige (
 	unsigned int **address,
@@ -1528,7 +1850,9 @@ void d_bicige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicilt (
 	unsigned int **address,
@@ -1538,7 +1862,9 @@ void d_bicilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicigt (
 	unsigned int **address,
@@ -1548,7 +1874,9 @@ void d_bicigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_bicile (
 	unsigned int **address,
@@ -1558,7 +1886,9 @@ void d_bicile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((14) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmn (
 	unsigned int **address,
@@ -1567,7 +1897,9 @@ void d_cmn (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmneq (
 	unsigned int **address,
@@ -1576,7 +1908,9 @@ void d_cmneq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnne (
 	unsigned int **address,
@@ -1585,7 +1919,9 @@ void d_cmnne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmncs (
 	unsigned int **address,
@@ -1594,7 +1930,9 @@ void d_cmncs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmncc (
 	unsigned int **address,
@@ -1603,7 +1941,9 @@ void d_cmncc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnmi (
 	unsigned int **address,
@@ -1612,7 +1952,9 @@ void d_cmnmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnpl (
 	unsigned int **address,
@@ -1621,7 +1963,9 @@ void d_cmnpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnvs (
 	unsigned int **address,
@@ -1630,7 +1974,9 @@ void d_cmnvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnvc (
 	unsigned int **address,
@@ -1639,7 +1985,9 @@ void d_cmnvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnhi (
 	unsigned int **address,
@@ -1648,7 +1996,9 @@ void d_cmnhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnls (
 	unsigned int **address,
@@ -1657,7 +2007,9 @@ void d_cmnls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnge (
 	unsigned int **address,
@@ -1666,7 +2018,9 @@ void d_cmnge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnlt (
 	unsigned int **address,
@@ -1675,7 +2029,9 @@ void d_cmnlt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmngt (
 	unsigned int **address,
@@ -1684,7 +2040,9 @@ void d_cmngt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnle (
 	unsigned int **address,
@@ -1693,7 +2051,9 @@ void d_cmnle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmni (
 	unsigned int **address,
@@ -1702,7 +2062,9 @@ void d_cmni (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnieq (
 	unsigned int **address,
@@ -1711,7 +2073,9 @@ void d_cmnieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnine (
 	unsigned int **address,
@@ -1720,7 +2084,9 @@ void d_cmnine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnics (
 	unsigned int **address,
@@ -1729,7 +2095,9 @@ void d_cmnics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnicc (
 	unsigned int **address,
@@ -1738,7 +2106,9 @@ void d_cmnicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnimi (
 	unsigned int **address,
@@ -1747,7 +2117,9 @@ void d_cmnimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnipl (
 	unsigned int **address,
@@ -1756,7 +2128,9 @@ void d_cmnipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnivs (
 	unsigned int **address,
@@ -1765,7 +2139,9 @@ void d_cmnivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnivc (
 	unsigned int **address,
@@ -1774,7 +2150,9 @@ void d_cmnivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnihi (
 	unsigned int **address,
@@ -1783,7 +2161,9 @@ void d_cmnihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnils (
 	unsigned int **address,
@@ -1792,7 +2172,9 @@ void d_cmnils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnige (
 	unsigned int **address,
@@ -1801,7 +2183,9 @@ void d_cmnige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnilt (
 	unsigned int **address,
@@ -1810,7 +2194,9 @@ void d_cmnilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnigt (
 	unsigned int **address,
@@ -1819,7 +2205,9 @@ void d_cmnigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmnile (
 	unsigned int **address,
@@ -1828,7 +2216,9 @@ void d_cmnile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((11) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmp (
 	unsigned int **address,
@@ -1837,7 +2227,9 @@ void d_cmp (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpeq (
 	unsigned int **address,
@@ -1846,7 +2238,9 @@ void d_cmpeq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpne (
 	unsigned int **address,
@@ -1855,7 +2249,9 @@ void d_cmpne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpcs (
 	unsigned int **address,
@@ -1864,7 +2260,9 @@ void d_cmpcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpcc (
 	unsigned int **address,
@@ -1873,7 +2271,9 @@ void d_cmpcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpmi (
 	unsigned int **address,
@@ -1882,7 +2282,9 @@ void d_cmpmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmppl (
 	unsigned int **address,
@@ -1891,7 +2293,9 @@ void d_cmppl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpvs (
 	unsigned int **address,
@@ -1900,7 +2304,9 @@ void d_cmpvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpvc (
 	unsigned int **address,
@@ -1909,7 +2315,9 @@ void d_cmpvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmphi (
 	unsigned int **address,
@@ -1918,7 +2326,9 @@ void d_cmphi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpls (
 	unsigned int **address,
@@ -1927,7 +2337,9 @@ void d_cmpls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpge (
 	unsigned int **address,
@@ -1936,7 +2348,9 @@ void d_cmpge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmplt (
 	unsigned int **address,
@@ -1945,7 +2359,9 @@ void d_cmplt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpgt (
 	unsigned int **address,
@@ -1954,7 +2370,9 @@ void d_cmpgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmple (
 	unsigned int **address,
@@ -1963,7 +2381,9 @@ void d_cmple (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpi (
 	unsigned int **address,
@@ -1972,7 +2392,9 @@ void d_cmpi (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpieq (
 	unsigned int **address,
@@ -1981,7 +2403,9 @@ void d_cmpieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpine (
 	unsigned int **address,
@@ -1990,7 +2414,9 @@ void d_cmpine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpics (
 	unsigned int **address,
@@ -1999,7 +2425,9 @@ void d_cmpics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpicc (
 	unsigned int **address,
@@ -2008,7 +2436,9 @@ void d_cmpicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpimi (
 	unsigned int **address,
@@ -2017,7 +2447,9 @@ void d_cmpimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpipl (
 	unsigned int **address,
@@ -2026,7 +2458,9 @@ void d_cmpipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpivs (
 	unsigned int **address,
@@ -2035,7 +2469,9 @@ void d_cmpivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpivc (
 	unsigned int **address,
@@ -2044,7 +2480,9 @@ void d_cmpivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpihi (
 	unsigned int **address,
@@ -2053,7 +2491,9 @@ void d_cmpihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpils (
 	unsigned int **address,
@@ -2062,7 +2502,9 @@ void d_cmpils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpige (
 	unsigned int **address,
@@ -2071,7 +2513,9 @@ void d_cmpige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpilt (
 	unsigned int **address,
@@ -2080,7 +2524,9 @@ void d_cmpilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpigt (
 	unsigned int **address,
@@ -2089,7 +2535,9 @@ void d_cmpigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_cmpile (
 	unsigned int **address,
@@ -2098,7 +2546,9 @@ void d_cmpile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((10) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eor (
 	unsigned int **address,
@@ -2108,7 +2558,9 @@ void d_eor (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eoreq (
 	unsigned int **address,
@@ -2118,7 +2570,9 @@ void d_eoreq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorne (
 	unsigned int **address,
@@ -2128,7 +2582,9 @@ void d_eorne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorcs (
 	unsigned int **address,
@@ -2138,7 +2594,9 @@ void d_eorcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorcc (
 	unsigned int **address,
@@ -2148,7 +2606,9 @@ void d_eorcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eormi (
 	unsigned int **address,
@@ -2158,7 +2618,9 @@ void d_eormi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorpl (
 	unsigned int **address,
@@ -2168,7 +2630,9 @@ void d_eorpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorvs (
 	unsigned int **address,
@@ -2178,7 +2642,9 @@ void d_eorvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorvc (
 	unsigned int **address,
@@ -2188,7 +2654,9 @@ void d_eorvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorhi (
 	unsigned int **address,
@@ -2198,7 +2666,9 @@ void d_eorhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorls (
 	unsigned int **address,
@@ -2208,7 +2678,9 @@ void d_eorls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorge (
 	unsigned int **address,
@@ -2218,7 +2690,9 @@ void d_eorge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorlt (
 	unsigned int **address,
@@ -2228,7 +2702,9 @@ void d_eorlt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorgt (
 	unsigned int **address,
@@ -2238,7 +2714,9 @@ void d_eorgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorle (
 	unsigned int **address,
@@ -2248,7 +2726,9 @@ void d_eorle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eori (
 	unsigned int **address,
@@ -2258,7 +2738,9 @@ void d_eori (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorieq (
 	unsigned int **address,
@@ -2268,7 +2750,9 @@ void d_eorieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorine (
 	unsigned int **address,
@@ -2278,7 +2762,9 @@ void d_eorine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorics (
 	unsigned int **address,
@@ -2288,7 +2774,9 @@ void d_eorics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eoricc (
 	unsigned int **address,
@@ -2298,7 +2786,9 @@ void d_eoricc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorimi (
 	unsigned int **address,
@@ -2308,7 +2798,9 @@ void d_eorimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eoripl (
 	unsigned int **address,
@@ -2318,7 +2810,9 @@ void d_eoripl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorivs (
 	unsigned int **address,
@@ -2328,7 +2822,9 @@ void d_eorivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorivc (
 	unsigned int **address,
@@ -2338,7 +2834,9 @@ void d_eorivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorihi (
 	unsigned int **address,
@@ -2348,7 +2846,9 @@ void d_eorihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorils (
 	unsigned int **address,
@@ -2358,7 +2858,9 @@ void d_eorils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorige (
 	unsigned int **address,
@@ -2368,7 +2870,9 @@ void d_eorige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorilt (
 	unsigned int **address,
@@ -2378,7 +2882,9 @@ void d_eorilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorigt (
 	unsigned int **address,
@@ -2388,7 +2894,9 @@ void d_eorigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_eorile (
 	unsigned int **address,
@@ -2398,7 +2906,9 @@ void d_eorile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((1) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mov (
 	unsigned int **address,
@@ -2407,7 +2917,9 @@ void d_mov (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_moveq (
 	unsigned int **address,
@@ -2416,7 +2928,9 @@ void d_moveq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movne (
 	unsigned int **address,
@@ -2425,7 +2939,9 @@ void d_movne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movcs (
 	unsigned int **address,
@@ -2434,7 +2950,9 @@ void d_movcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movcc (
 	unsigned int **address,
@@ -2443,7 +2961,9 @@ void d_movcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movmi (
 	unsigned int **address,
@@ -2452,7 +2972,9 @@ void d_movmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movpl (
 	unsigned int **address,
@@ -2461,7 +2983,9 @@ void d_movpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movvs (
 	unsigned int **address,
@@ -2470,7 +2994,9 @@ void d_movvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movvc (
 	unsigned int **address,
@@ -2479,7 +3005,9 @@ void d_movvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movhi (
 	unsigned int **address,
@@ -2488,7 +3016,9 @@ void d_movhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movls (
 	unsigned int **address,
@@ -2497,7 +3027,9 @@ void d_movls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movge (
 	unsigned int **address,
@@ -2506,7 +3038,9 @@ void d_movge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movlt (
 	unsigned int **address,
@@ -2515,7 +3049,9 @@ void d_movlt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movgt (
 	unsigned int **address,
@@ -2524,7 +3060,9 @@ void d_movgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movle (
 	unsigned int **address,
@@ -2533,7 +3071,9 @@ void d_movle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movi (
 	unsigned int **address,
@@ -2542,7 +3082,9 @@ void d_movi (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movieq (
 	unsigned int **address,
@@ -2551,7 +3093,9 @@ void d_movieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movine (
 	unsigned int **address,
@@ -2560,7 +3104,9 @@ void d_movine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movics (
 	unsigned int **address,
@@ -2569,7 +3115,9 @@ void d_movics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movicc (
 	unsigned int **address,
@@ -2578,7 +3126,9 @@ void d_movicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movimi (
 	unsigned int **address,
@@ -2587,7 +3137,9 @@ void d_movimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movipl (
 	unsigned int **address,
@@ -2596,7 +3148,9 @@ void d_movipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movivs (
 	unsigned int **address,
@@ -2605,7 +3159,9 @@ void d_movivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movivc (
 	unsigned int **address,
@@ -2614,7 +3170,9 @@ void d_movivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movihi (
 	unsigned int **address,
@@ -2623,7 +3181,9 @@ void d_movihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movils (
 	unsigned int **address,
@@ -2632,7 +3192,9 @@ void d_movils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movige (
 	unsigned int **address,
@@ -2641,7 +3203,9 @@ void d_movige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movilt (
 	unsigned int **address,
@@ -2650,7 +3214,9 @@ void d_movilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movigt (
 	unsigned int **address,
@@ -2659,7 +3225,9 @@ void d_movigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_movile (
 	unsigned int **address,
@@ -2668,7 +3236,9 @@ void d_movile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((13) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvn (
 	unsigned int **address,
@@ -2677,7 +3247,9 @@ void d_mvn (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvneq (
 	unsigned int **address,
@@ -2686,7 +3258,9 @@ void d_mvneq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnne (
 	unsigned int **address,
@@ -2695,7 +3269,9 @@ void d_mvnne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvncs (
 	unsigned int **address,
@@ -2704,7 +3280,9 @@ void d_mvncs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvncc (
 	unsigned int **address,
@@ -2713,7 +3291,9 @@ void d_mvncc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnmi (
 	unsigned int **address,
@@ -2722,7 +3302,9 @@ void d_mvnmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnpl (
 	unsigned int **address,
@@ -2731,7 +3313,9 @@ void d_mvnpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnvs (
 	unsigned int **address,
@@ -2740,7 +3324,9 @@ void d_mvnvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnvc (
 	unsigned int **address,
@@ -2749,7 +3335,9 @@ void d_mvnvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnhi (
 	unsigned int **address,
@@ -2758,7 +3346,9 @@ void d_mvnhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnls (
 	unsigned int **address,
@@ -2767,7 +3357,9 @@ void d_mvnls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnge (
 	unsigned int **address,
@@ -2776,7 +3368,9 @@ void d_mvnge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnlt (
 	unsigned int **address,
@@ -2785,7 +3379,9 @@ void d_mvnlt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvngt (
 	unsigned int **address,
@@ -2794,7 +3390,9 @@ void d_mvngt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnle (
 	unsigned int **address,
@@ -2803,7 +3401,9 @@ void d_mvnle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvni (
 	unsigned int **address,
@@ -2812,7 +3412,9 @@ void d_mvni (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnieq (
 	unsigned int **address,
@@ -2821,7 +3423,9 @@ void d_mvnieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnine (
 	unsigned int **address,
@@ -2830,7 +3434,9 @@ void d_mvnine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnics (
 	unsigned int **address,
@@ -2839,7 +3445,9 @@ void d_mvnics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnicc (
 	unsigned int **address,
@@ -2848,7 +3456,9 @@ void d_mvnicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnimi (
 	unsigned int **address,
@@ -2857,7 +3467,9 @@ void d_mvnimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnipl (
 	unsigned int **address,
@@ -2866,7 +3478,9 @@ void d_mvnipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnivs (
 	unsigned int **address,
@@ -2875,7 +3489,9 @@ void d_mvnivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnivc (
 	unsigned int **address,
@@ -2884,7 +3500,9 @@ void d_mvnivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnihi (
 	unsigned int **address,
@@ -2893,7 +3511,9 @@ void d_mvnihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnils (
 	unsigned int **address,
@@ -2902,7 +3522,9 @@ void d_mvnils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnige (
 	unsigned int **address,
@@ -2911,7 +3533,9 @@ void d_mvnige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnilt (
 	unsigned int **address,
@@ -2920,7 +3544,9 @@ void d_mvnilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnigt (
 	unsigned int **address,
@@ -2929,7 +3555,9 @@ void d_mvnigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mvnile (
 	unsigned int **address,
@@ -2938,7 +3566,9 @@ void d_mvnile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((15) << 21) | ((0) << 20) | ((rd) << 12) | ((0) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orr (
 	unsigned int **address,
@@ -2948,7 +3578,9 @@ void d_orr (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orreq (
 	unsigned int **address,
@@ -2958,7 +3590,9 @@ void d_orreq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrne (
 	unsigned int **address,
@@ -2968,7 +3602,9 @@ void d_orrne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrcs (
 	unsigned int **address,
@@ -2978,7 +3614,9 @@ void d_orrcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrcc (
 	unsigned int **address,
@@ -2988,7 +3626,9 @@ void d_orrcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrmi (
 	unsigned int **address,
@@ -2998,7 +3638,9 @@ void d_orrmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrpl (
 	unsigned int **address,
@@ -3008,7 +3650,9 @@ void d_orrpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrvs (
 	unsigned int **address,
@@ -3018,7 +3662,9 @@ void d_orrvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrvc (
 	unsigned int **address,
@@ -3028,7 +3674,9 @@ void d_orrvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrhi (
 	unsigned int **address,
@@ -3038,7 +3686,9 @@ void d_orrhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrls (
 	unsigned int **address,
@@ -3048,7 +3698,9 @@ void d_orrls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrge (
 	unsigned int **address,
@@ -3058,7 +3710,9 @@ void d_orrge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrlt (
 	unsigned int **address,
@@ -3068,7 +3722,9 @@ void d_orrlt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrgt (
 	unsigned int **address,
@@ -3078,7 +3734,9 @@ void d_orrgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrle (
 	unsigned int **address,
@@ -3088,7 +3746,9 @@ void d_orrle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orri (
 	unsigned int **address,
@@ -3098,7 +3758,9 @@ void d_orri (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrieq (
 	unsigned int **address,
@@ -3108,7 +3770,9 @@ void d_orrieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrine (
 	unsigned int **address,
@@ -3118,7 +3782,9 @@ void d_orrine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrics (
 	unsigned int **address,
@@ -3128,7 +3794,9 @@ void d_orrics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orricc (
 	unsigned int **address,
@@ -3138,7 +3806,9 @@ void d_orricc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrimi (
 	unsigned int **address,
@@ -3148,7 +3818,9 @@ void d_orrimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orripl (
 	unsigned int **address,
@@ -3158,7 +3830,9 @@ void d_orripl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrivs (
 	unsigned int **address,
@@ -3168,7 +3842,9 @@ void d_orrivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrivc (
 	unsigned int **address,
@@ -3178,7 +3854,9 @@ void d_orrivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrihi (
 	unsigned int **address,
@@ -3188,7 +3866,9 @@ void d_orrihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrils (
 	unsigned int **address,
@@ -3198,7 +3878,9 @@ void d_orrils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrige (
 	unsigned int **address,
@@ -3208,7 +3890,9 @@ void d_orrige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrilt (
 	unsigned int **address,
@@ -3218,7 +3902,9 @@ void d_orrilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrigt (
 	unsigned int **address,
@@ -3228,7 +3914,9 @@ void d_orrigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_orrile (
 	unsigned int **address,
@@ -3238,7 +3926,9 @@ void d_orrile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((12) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsb (
 	unsigned int **address,
@@ -3248,7 +3938,9 @@ void d_rsb (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbeq (
 	unsigned int **address,
@@ -3258,7 +3950,9 @@ void d_rsbeq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbne (
 	unsigned int **address,
@@ -3268,7 +3962,9 @@ void d_rsbne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbcs (
 	unsigned int **address,
@@ -3278,7 +3974,9 @@ void d_rsbcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbcc (
 	unsigned int **address,
@@ -3288,7 +3986,9 @@ void d_rsbcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbmi (
 	unsigned int **address,
@@ -3298,7 +3998,9 @@ void d_rsbmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbpl (
 	unsigned int **address,
@@ -3308,7 +4010,9 @@ void d_rsbpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbvs (
 	unsigned int **address,
@@ -3318,7 +4022,9 @@ void d_rsbvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbvc (
 	unsigned int **address,
@@ -3328,7 +4034,9 @@ void d_rsbvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbhi (
 	unsigned int **address,
@@ -3338,7 +4046,9 @@ void d_rsbhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbls (
 	unsigned int **address,
@@ -3348,7 +4058,9 @@ void d_rsbls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbge (
 	unsigned int **address,
@@ -3358,7 +4070,9 @@ void d_rsbge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsblt (
 	unsigned int **address,
@@ -3368,7 +4082,9 @@ void d_rsblt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbgt (
 	unsigned int **address,
@@ -3378,7 +4094,9 @@ void d_rsbgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsble (
 	unsigned int **address,
@@ -3388,7 +4106,9 @@ void d_rsble (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbi (
 	unsigned int **address,
@@ -3398,7 +4118,9 @@ void d_rsbi (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbieq (
 	unsigned int **address,
@@ -3408,7 +4130,9 @@ void d_rsbieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbine (
 	unsigned int **address,
@@ -3418,7 +4142,9 @@ void d_rsbine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbics (
 	unsigned int **address,
@@ -3428,7 +4154,9 @@ void d_rsbics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbicc (
 	unsigned int **address,
@@ -3438,7 +4166,9 @@ void d_rsbicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbimi (
 	unsigned int **address,
@@ -3448,7 +4178,9 @@ void d_rsbimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbipl (
 	unsigned int **address,
@@ -3458,7 +4190,9 @@ void d_rsbipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbivs (
 	unsigned int **address,
@@ -3468,7 +4202,9 @@ void d_rsbivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbivc (
 	unsigned int **address,
@@ -3478,7 +4214,9 @@ void d_rsbivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbihi (
 	unsigned int **address,
@@ -3488,7 +4226,9 @@ void d_rsbihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbils (
 	unsigned int **address,
@@ -3498,7 +4238,9 @@ void d_rsbils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbige (
 	unsigned int **address,
@@ -3508,7 +4250,9 @@ void d_rsbige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbilt (
 	unsigned int **address,
@@ -3518,7 +4262,9 @@ void d_rsbilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbigt (
 	unsigned int **address,
@@ -3528,7 +4274,9 @@ void d_rsbigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsbile (
 	unsigned int **address,
@@ -3538,7 +4286,9 @@ void d_rsbile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((3) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsc (
 	unsigned int **address,
@@ -3548,7 +4298,9 @@ void d_rsc (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsceq (
 	unsigned int **address,
@@ -3558,7 +4310,9 @@ void d_rsceq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscne (
 	unsigned int **address,
@@ -3568,7 +4322,9 @@ void d_rscne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsccs (
 	unsigned int **address,
@@ -3578,7 +4334,9 @@ void d_rsccs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsccc (
 	unsigned int **address,
@@ -3588,7 +4346,9 @@ void d_rsccc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscmi (
 	unsigned int **address,
@@ -3598,7 +4358,9 @@ void d_rscmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscpl (
 	unsigned int **address,
@@ -3608,7 +4370,9 @@ void d_rscpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscvs (
 	unsigned int **address,
@@ -3618,7 +4382,9 @@ void d_rscvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscvc (
 	unsigned int **address,
@@ -3628,7 +4394,9 @@ void d_rscvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rschi (
 	unsigned int **address,
@@ -3638,7 +4406,9 @@ void d_rschi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscls (
 	unsigned int **address,
@@ -3648,7 +4418,9 @@ void d_rscls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscge (
 	unsigned int **address,
@@ -3658,7 +4430,9 @@ void d_rscge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsclt (
 	unsigned int **address,
@@ -3668,7 +4442,9 @@ void d_rsclt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscgt (
 	unsigned int **address,
@@ -3678,7 +4454,9 @@ void d_rscgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscle (
 	unsigned int **address,
@@ -3688,7 +4466,9 @@ void d_rscle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rsci (
 	unsigned int **address,
@@ -3698,7 +4478,9 @@ void d_rsci (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscieq (
 	unsigned int **address,
@@ -3708,7 +4490,9 @@ void d_rscieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscine (
 	unsigned int **address,
@@ -3718,7 +4502,9 @@ void d_rscine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscics (
 	unsigned int **address,
@@ -3728,7 +4514,9 @@ void d_rscics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscicc (
 	unsigned int **address,
@@ -3738,7 +4526,9 @@ void d_rscicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscimi (
 	unsigned int **address,
@@ -3748,7 +4538,9 @@ void d_rscimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscipl (
 	unsigned int **address,
@@ -3758,7 +4550,9 @@ void d_rscipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscivs (
 	unsigned int **address,
@@ -3768,7 +4562,9 @@ void d_rscivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscivc (
 	unsigned int **address,
@@ -3778,7 +4574,9 @@ void d_rscivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscihi (
 	unsigned int **address,
@@ -3788,7 +4586,9 @@ void d_rscihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscils (
 	unsigned int **address,
@@ -3798,7 +4598,9 @@ void d_rscils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscige (
 	unsigned int **address,
@@ -3808,7 +4610,9 @@ void d_rscige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscilt (
 	unsigned int **address,
@@ -3818,7 +4622,9 @@ void d_rscilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscigt (
 	unsigned int **address,
@@ -3828,7 +4634,9 @@ void d_rscigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_rscile (
 	unsigned int **address,
@@ -3838,7 +4646,9 @@ void d_rscile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((7) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbc (
 	unsigned int **address,
@@ -3848,7 +4658,9 @@ void d_sbc (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbceq (
 	unsigned int **address,
@@ -3858,7 +4670,9 @@ void d_sbceq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcne (
 	unsigned int **address,
@@ -3868,7 +4682,9 @@ void d_sbcne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbccs (
 	unsigned int **address,
@@ -3878,7 +4694,9 @@ void d_sbccs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbccc (
 	unsigned int **address,
@@ -3888,7 +4706,9 @@ void d_sbccc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcmi (
 	unsigned int **address,
@@ -3898,7 +4718,9 @@ void d_sbcmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcpl (
 	unsigned int **address,
@@ -3908,7 +4730,9 @@ void d_sbcpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcvs (
 	unsigned int **address,
@@ -3918,7 +4742,9 @@ void d_sbcvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcvc (
 	unsigned int **address,
@@ -3928,7 +4754,9 @@ void d_sbcvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbchi (
 	unsigned int **address,
@@ -3938,7 +4766,9 @@ void d_sbchi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcls (
 	unsigned int **address,
@@ -3948,7 +4778,9 @@ void d_sbcls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcge (
 	unsigned int **address,
@@ -3958,7 +4790,9 @@ void d_sbcge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbclt (
 	unsigned int **address,
@@ -3968,7 +4802,9 @@ void d_sbclt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcgt (
 	unsigned int **address,
@@ -3978,7 +4814,9 @@ void d_sbcgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcle (
 	unsigned int **address,
@@ -3988,7 +4826,9 @@ void d_sbcle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbci (
 	unsigned int **address,
@@ -3998,7 +4838,9 @@ void d_sbci (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcieq (
 	unsigned int **address,
@@ -4008,7 +4850,9 @@ void d_sbcieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcine (
 	unsigned int **address,
@@ -4018,7 +4862,9 @@ void d_sbcine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcics (
 	unsigned int **address,
@@ -4028,7 +4874,9 @@ void d_sbcics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcicc (
 	unsigned int **address,
@@ -4038,7 +4886,9 @@ void d_sbcicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcimi (
 	unsigned int **address,
@@ -4048,7 +4898,9 @@ void d_sbcimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcipl (
 	unsigned int **address,
@@ -4058,7 +4910,9 @@ void d_sbcipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcivs (
 	unsigned int **address,
@@ -4068,7 +4922,9 @@ void d_sbcivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcivc (
 	unsigned int **address,
@@ -4078,7 +4934,9 @@ void d_sbcivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcihi (
 	unsigned int **address,
@@ -4088,7 +4946,9 @@ void d_sbcihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcils (
 	unsigned int **address,
@@ -4098,7 +4958,9 @@ void d_sbcils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcige (
 	unsigned int **address,
@@ -4108,7 +4970,9 @@ void d_sbcige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcilt (
 	unsigned int **address,
@@ -4118,7 +4982,9 @@ void d_sbcilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcigt (
 	unsigned int **address,
@@ -4128,7 +4994,9 @@ void d_sbcigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sbcile (
 	unsigned int **address,
@@ -4138,7 +5006,9 @@ void d_sbcile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((6) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sub (
 	unsigned int **address,
@@ -4148,7 +5018,9 @@ void d_sub (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subeq (
 	unsigned int **address,
@@ -4158,7 +5030,9 @@ void d_subeq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subne (
 	unsigned int **address,
@@ -4168,7 +5042,9 @@ void d_subne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subcs (
 	unsigned int **address,
@@ -4178,7 +5054,9 @@ void d_subcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subcc (
 	unsigned int **address,
@@ -4188,7 +5066,9 @@ void d_subcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_submi (
 	unsigned int **address,
@@ -4198,7 +5078,9 @@ void d_submi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subpl (
 	unsigned int **address,
@@ -4208,7 +5090,9 @@ void d_subpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subvs (
 	unsigned int **address,
@@ -4218,7 +5102,9 @@ void d_subvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subvc (
 	unsigned int **address,
@@ -4228,7 +5114,9 @@ void d_subvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subhi (
 	unsigned int **address,
@@ -4238,7 +5126,9 @@ void d_subhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subls (
 	unsigned int **address,
@@ -4248,7 +5138,9 @@ void d_subls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subge (
 	unsigned int **address,
@@ -4258,7 +5150,9 @@ void d_subge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_sublt (
 	unsigned int **address,
@@ -4268,7 +5162,9 @@ void d_sublt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subgt (
 	unsigned int **address,
@@ -4278,7 +5174,9 @@ void d_subgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_suble (
 	unsigned int **address,
@@ -4288,7 +5186,9 @@ void d_suble (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subi (
 	unsigned int **address,
@@ -4298,7 +5198,9 @@ void d_subi (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subieq (
 	unsigned int **address,
@@ -4308,7 +5210,9 @@ void d_subieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subine (
 	unsigned int **address,
@@ -4318,7 +5222,9 @@ void d_subine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subics (
 	unsigned int **address,
@@ -4328,7 +5234,9 @@ void d_subics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subicc (
 	unsigned int **address,
@@ -4338,7 +5246,9 @@ void d_subicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subimi (
 	unsigned int **address,
@@ -4348,7 +5258,9 @@ void d_subimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subipl (
 	unsigned int **address,
@@ -4358,7 +5270,9 @@ void d_subipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subivs (
 	unsigned int **address,
@@ -4368,7 +5282,9 @@ void d_subivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subivc (
 	unsigned int **address,
@@ -4378,7 +5294,9 @@ void d_subivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subihi (
 	unsigned int **address,
@@ -4388,7 +5306,9 @@ void d_subihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subils (
 	unsigned int **address,
@@ -4398,7 +5318,9 @@ void d_subils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subige (
 	unsigned int **address,
@@ -4408,7 +5330,9 @@ void d_subige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subilt (
 	unsigned int **address,
@@ -4418,7 +5342,9 @@ void d_subilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subigt (
 	unsigned int **address,
@@ -4428,7 +5354,9 @@ void d_subigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_subile (
 	unsigned int **address,
@@ -4438,7 +5366,9 @@ void d_subile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((2) << 21) | ((0) << 20) | ((rd) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teq (
 	unsigned int **address,
@@ -4447,7 +5377,9 @@ void d_teq (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqeq (
 	unsigned int **address,
@@ -4456,7 +5388,9 @@ void d_teqeq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqne (
 	unsigned int **address,
@@ -4465,7 +5399,9 @@ void d_teqne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqcs (
 	unsigned int **address,
@@ -4474,7 +5410,9 @@ void d_teqcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqcc (
 	unsigned int **address,
@@ -4483,7 +5421,9 @@ void d_teqcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqmi (
 	unsigned int **address,
@@ -4492,7 +5432,9 @@ void d_teqmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqpl (
 	unsigned int **address,
@@ -4501,7 +5443,9 @@ void d_teqpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqvs (
 	unsigned int **address,
@@ -4510,7 +5454,9 @@ void d_teqvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqvc (
 	unsigned int **address,
@@ -4519,7 +5465,9 @@ void d_teqvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqhi (
 	unsigned int **address,
@@ -4528,7 +5476,9 @@ void d_teqhi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqls (
 	unsigned int **address,
@@ -4537,7 +5487,9 @@ void d_teqls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqge (
 	unsigned int **address,
@@ -4546,7 +5498,9 @@ void d_teqge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqlt (
 	unsigned int **address,
@@ -4555,7 +5509,9 @@ void d_teqlt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqgt (
 	unsigned int **address,
@@ -4564,7 +5520,9 @@ void d_teqgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqle (
 	unsigned int **address,
@@ -4573,7 +5531,9 @@ void d_teqle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqi (
 	unsigned int **address,
@@ -4582,7 +5542,9 @@ void d_teqi (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqieq (
 	unsigned int **address,
@@ -4591,7 +5553,9 @@ void d_teqieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqine (
 	unsigned int **address,
@@ -4600,7 +5564,9 @@ void d_teqine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqics (
 	unsigned int **address,
@@ -4609,7 +5575,9 @@ void d_teqics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqicc (
 	unsigned int **address,
@@ -4618,7 +5586,9 @@ void d_teqicc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqimi (
 	unsigned int **address,
@@ -4627,7 +5597,9 @@ void d_teqimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqipl (
 	unsigned int **address,
@@ -4636,7 +5608,9 @@ void d_teqipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqivs (
 	unsigned int **address,
@@ -4645,7 +5619,9 @@ void d_teqivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqivc (
 	unsigned int **address,
@@ -4654,7 +5630,9 @@ void d_teqivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqihi (
 	unsigned int **address,
@@ -4663,7 +5641,9 @@ void d_teqihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqils (
 	unsigned int **address,
@@ -4672,7 +5652,9 @@ void d_teqils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqige (
 	unsigned int **address,
@@ -4681,7 +5663,9 @@ void d_teqige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqilt (
 	unsigned int **address,
@@ -4690,7 +5674,9 @@ void d_teqilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqigt (
 	unsigned int **address,
@@ -4699,7 +5685,9 @@ void d_teqigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_teqile (
 	unsigned int **address,
@@ -4708,7 +5696,9 @@ void d_teqile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((9) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tst (
 	unsigned int **address,
@@ -4717,7 +5707,9 @@ void d_tst (
 )
 {
 	**address = (14 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tsteq (
 	unsigned int **address,
@@ -4726,7 +5718,9 @@ void d_tsteq (
 )
 {
 	**address = (0 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstne (
 	unsigned int **address,
@@ -4735,7 +5729,9 @@ void d_tstne (
 )
 {
 	**address = (1 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstcs (
 	unsigned int **address,
@@ -4744,7 +5740,9 @@ void d_tstcs (
 )
 {
 	**address = (2 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstcc (
 	unsigned int **address,
@@ -4753,7 +5751,9 @@ void d_tstcc (
 )
 {
 	**address = (3 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstmi (
 	unsigned int **address,
@@ -4762,7 +5762,9 @@ void d_tstmi (
 )
 {
 	**address = (4 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstpl (
 	unsigned int **address,
@@ -4771,7 +5773,9 @@ void d_tstpl (
 )
 {
 	**address = (5 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstvs (
 	unsigned int **address,
@@ -4780,7 +5784,9 @@ void d_tstvs (
 )
 {
 	**address = (6 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstvc (
 	unsigned int **address,
@@ -4789,7 +5795,9 @@ void d_tstvc (
 )
 {
 	**address = (7 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tsthi (
 	unsigned int **address,
@@ -4798,7 +5806,9 @@ void d_tsthi (
 )
 {
 	**address = (8 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstls (
 	unsigned int **address,
@@ -4807,7 +5817,9 @@ void d_tstls (
 )
 {
 	**address = (9 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstge (
 	unsigned int **address,
@@ -4816,7 +5828,9 @@ void d_tstge (
 )
 {
 	**address = (10 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstlt (
 	unsigned int **address,
@@ -4825,7 +5839,9 @@ void d_tstlt (
 )
 {
 	**address = (11 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstgt (
 	unsigned int **address,
@@ -4834,7 +5850,9 @@ void d_tstgt (
 )
 {
 	**address = (12 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstle (
 	unsigned int **address,
@@ -4843,7 +5861,9 @@ void d_tstle (
 )
 {
 	**address = (13 << 28) | ((0) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tsti (
 	unsigned int **address,
@@ -4852,7 +5872,9 @@ void d_tsti (
 )
 {
 	**address = (14 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstieq (
 	unsigned int **address,
@@ -4861,7 +5883,9 @@ void d_tstieq (
 )
 {
 	**address = (0 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstine (
 	unsigned int **address,
@@ -4870,7 +5894,9 @@ void d_tstine (
 )
 {
 	**address = (1 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstics (
 	unsigned int **address,
@@ -4879,7 +5905,9 @@ void d_tstics (
 )
 {
 	**address = (2 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tsticc (
 	unsigned int **address,
@@ -4888,7 +5916,9 @@ void d_tsticc (
 )
 {
 	**address = (3 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstimi (
 	unsigned int **address,
@@ -4897,7 +5927,9 @@ void d_tstimi (
 )
 {
 	**address = (4 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstipl (
 	unsigned int **address,
@@ -4906,7 +5938,9 @@ void d_tstipl (
 )
 {
 	**address = (5 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstivs (
 	unsigned int **address,
@@ -4915,7 +5949,9 @@ void d_tstivs (
 )
 {
 	**address = (6 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstivc (
 	unsigned int **address,
@@ -4924,7 +5960,9 @@ void d_tstivc (
 )
 {
 	**address = (7 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstihi (
 	unsigned int **address,
@@ -4933,7 +5971,9 @@ void d_tstihi (
 )
 {
 	**address = (8 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstils (
 	unsigned int **address,
@@ -4942,7 +5982,9 @@ void d_tstils (
 )
 {
 	**address = (9 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstige (
 	unsigned int **address,
@@ -4951,7 +5993,9 @@ void d_tstige (
 )
 {
 	**address = (10 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstilt (
 	unsigned int **address,
@@ -4960,7 +6004,9 @@ void d_tstilt (
 )
 {
 	**address = (11 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstigt (
 	unsigned int **address,
@@ -4969,7 +6015,9 @@ void d_tstigt (
 )
 {
 	**address = (12 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_tstile (
 	unsigned int **address,
@@ -4978,7 +6026,9 @@ void d_tstile (
 )
 {
 	**address = (13 << 28) | ((1) << 25) | ((8) << 21) | ((1) << 20) | ((0) << 12) | ((rn) << 16) | ((operand2) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mul (
 	unsigned int **address,
@@ -4988,7 +6038,9 @@ void d_mul (
 )
 {
 	**address = (14 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_muleq (
 	unsigned int **address,
@@ -4998,7 +6050,9 @@ void d_muleq (
 )
 {
 	**address = (0 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulne (
 	unsigned int **address,
@@ -5008,7 +6062,9 @@ void d_mulne (
 )
 {
 	**address = (1 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulcs (
 	unsigned int **address,
@@ -5018,7 +6074,9 @@ void d_mulcs (
 )
 {
 	**address = (2 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulcc (
 	unsigned int **address,
@@ -5028,7 +6086,9 @@ void d_mulcc (
 )
 {
 	**address = (3 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulmi (
 	unsigned int **address,
@@ -5038,7 +6098,9 @@ void d_mulmi (
 )
 {
 	**address = (4 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulpl (
 	unsigned int **address,
@@ -5048,7 +6110,9 @@ void d_mulpl (
 )
 {
 	**address = (5 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulvs (
 	unsigned int **address,
@@ -5058,7 +6122,9 @@ void d_mulvs (
 )
 {
 	**address = (6 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulvc (
 	unsigned int **address,
@@ -5068,7 +6134,9 @@ void d_mulvc (
 )
 {
 	**address = (7 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulhi (
 	unsigned int **address,
@@ -5078,7 +6146,9 @@ void d_mulhi (
 )
 {
 	**address = (8 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulls (
 	unsigned int **address,
@@ -5088,7 +6158,9 @@ void d_mulls (
 )
 {
 	**address = (9 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulge (
 	unsigned int **address,
@@ -5098,7 +6170,9 @@ void d_mulge (
 )
 {
 	**address = (10 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mullt (
 	unsigned int **address,
@@ -5108,7 +6182,9 @@ void d_mullt (
 )
 {
 	**address = (11 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulgt (
 	unsigned int **address,
@@ -5118,7 +6194,9 @@ void d_mulgt (
 )
 {
 	**address = (12 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mulle (
 	unsigned int **address,
@@ -5128,7 +6206,9 @@ void d_mulle (
 )
 {
 	**address = (13 << 28) | ((0) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((0) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mla (
 	unsigned int **address,
@@ -5139,7 +6219,9 @@ void d_mla (
 )
 {
 	**address = (14 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlaeq (
 	unsigned int **address,
@@ -5150,7 +6232,9 @@ void d_mlaeq (
 )
 {
 	**address = (0 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlane (
 	unsigned int **address,
@@ -5161,7 +6245,9 @@ void d_mlane (
 )
 {
 	**address = (1 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlacs (
 	unsigned int **address,
@@ -5172,7 +6258,9 @@ void d_mlacs (
 )
 {
 	**address = (2 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlacc (
 	unsigned int **address,
@@ -5183,7 +6271,9 @@ void d_mlacc (
 )
 {
 	**address = (3 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlami (
 	unsigned int **address,
@@ -5194,7 +6284,9 @@ void d_mlami (
 )
 {
 	**address = (4 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlapl (
 	unsigned int **address,
@@ -5205,7 +6297,9 @@ void d_mlapl (
 )
 {
 	**address = (5 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlavs (
 	unsigned int **address,
@@ -5216,7 +6310,9 @@ void d_mlavs (
 )
 {
 	**address = (6 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlavc (
 	unsigned int **address,
@@ -5227,7 +6323,9 @@ void d_mlavc (
 )
 {
 	**address = (7 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlahi (
 	unsigned int **address,
@@ -5238,7 +6336,9 @@ void d_mlahi (
 )
 {
 	**address = (8 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlals (
 	unsigned int **address,
@@ -5249,7 +6349,9 @@ void d_mlals (
 )
 {
 	**address = (9 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlage (
 	unsigned int **address,
@@ -5260,7 +6362,9 @@ void d_mlage (
 )
 {
 	**address = (10 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlalt (
 	unsigned int **address,
@@ -5271,7 +6375,9 @@ void d_mlalt (
 )
 {
 	**address = (11 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlagt (
 	unsigned int **address,
@@ -5282,7 +6388,9 @@ void d_mlagt (
 )
 {
 	**address = (12 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_mlale (
 	unsigned int **address,
@@ -5293,7 +6401,9 @@ void d_mlale (
 )
 {
 	**address = (13 << 28) | ((1) << 21) | ((0) << 20) | ((rd) << 16) | ((rm) << 0) | ((rs) << 8) | ((rn) << 12) | ((9) << 4);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrb (
 	unsigned int **address,
@@ -5306,7 +6416,9 @@ void d_ldrb (
 )
 {
 	**address = (14 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbeq (
 	unsigned int **address,
@@ -5319,7 +6431,9 @@ void d_ldrbeq (
 )
 {
 	**address = (0 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbne (
 	unsigned int **address,
@@ -5332,7 +6446,9 @@ void d_ldrbne (
 )
 {
 	**address = (1 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbcs (
 	unsigned int **address,
@@ -5345,7 +6461,9 @@ void d_ldrbcs (
 )
 {
 	**address = (2 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbcc (
 	unsigned int **address,
@@ -5358,7 +6476,9 @@ void d_ldrbcc (
 )
 {
 	**address = (3 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbmi (
 	unsigned int **address,
@@ -5371,7 +6491,9 @@ void d_ldrbmi (
 )
 {
 	**address = (4 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbpl (
 	unsigned int **address,
@@ -5384,7 +6506,9 @@ void d_ldrbpl (
 )
 {
 	**address = (5 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbvs (
 	unsigned int **address,
@@ -5397,7 +6521,9 @@ void d_ldrbvs (
 )
 {
 	**address = (6 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbvc (
 	unsigned int **address,
@@ -5410,7 +6536,9 @@ void d_ldrbvc (
 )
 {
 	**address = (7 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbhi (
 	unsigned int **address,
@@ -5423,7 +6551,9 @@ void d_ldrbhi (
 )
 {
 	**address = (8 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbls (
 	unsigned int **address,
@@ -5436,7 +6566,9 @@ void d_ldrbls (
 )
 {
 	**address = (9 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbge (
 	unsigned int **address,
@@ -5449,7 +6581,9 @@ void d_ldrbge (
 )
 {
 	**address = (10 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrblt (
 	unsigned int **address,
@@ -5462,7 +6596,9 @@ void d_ldrblt (
 )
 {
 	**address = (11 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbgt (
 	unsigned int **address,
@@ -5475,7 +6611,9 @@ void d_ldrbgt (
 )
 {
 	**address = (12 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrble (
 	unsigned int **address,
@@ -5488,7 +6626,9 @@ void d_ldrble (
 )
 {
 	**address = (13 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbi (
 	unsigned int **address,
@@ -5501,7 +6641,9 @@ void d_ldrbi (
 )
 {
 	**address = (14 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbieq (
 	unsigned int **address,
@@ -5514,7 +6656,9 @@ void d_ldrbieq (
 )
 {
 	**address = (0 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbine (
 	unsigned int **address,
@@ -5527,7 +6671,9 @@ void d_ldrbine (
 )
 {
 	**address = (1 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbics (
 	unsigned int **address,
@@ -5540,7 +6686,9 @@ void d_ldrbics (
 )
 {
 	**address = (2 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbicc (
 	unsigned int **address,
@@ -5553,7 +6701,9 @@ void d_ldrbicc (
 )
 {
 	**address = (3 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbimi (
 	unsigned int **address,
@@ -5566,7 +6716,9 @@ void d_ldrbimi (
 )
 {
 	**address = (4 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbipl (
 	unsigned int **address,
@@ -5579,7 +6731,9 @@ void d_ldrbipl (
 )
 {
 	**address = (5 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbivs (
 	unsigned int **address,
@@ -5592,7 +6746,9 @@ void d_ldrbivs (
 )
 {
 	**address = (6 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbivc (
 	unsigned int **address,
@@ -5605,7 +6761,9 @@ void d_ldrbivc (
 )
 {
 	**address = (7 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbihi (
 	unsigned int **address,
@@ -5618,7 +6776,9 @@ void d_ldrbihi (
 )
 {
 	**address = (8 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbils (
 	unsigned int **address,
@@ -5631,7 +6791,9 @@ void d_ldrbils (
 )
 {
 	**address = (9 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbige (
 	unsigned int **address,
@@ -5644,7 +6806,9 @@ void d_ldrbige (
 )
 {
 	**address = (10 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbilt (
 	unsigned int **address,
@@ -5657,7 +6821,9 @@ void d_ldrbilt (
 )
 {
 	**address = (11 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbigt (
 	unsigned int **address,
@@ -5670,7 +6836,9 @@ void d_ldrbigt (
 )
 {
 	**address = (12 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrbile (
 	unsigned int **address,
@@ -5683,7 +6851,9 @@ void d_ldrbile (
 )
 {
 	**address = (13 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldr (
 	unsigned int **address,
@@ -5696,7 +6866,9 @@ void d_ldr (
 )
 {
 	**address = (14 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldreq (
 	unsigned int **address,
@@ -5709,7 +6881,9 @@ void d_ldreq (
 )
 {
 	**address = (0 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrne (
 	unsigned int **address,
@@ -5722,7 +6896,9 @@ void d_ldrne (
 )
 {
 	**address = (1 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrcs (
 	unsigned int **address,
@@ -5735,7 +6911,9 @@ void d_ldrcs (
 )
 {
 	**address = (2 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrcc (
 	unsigned int **address,
@@ -5748,7 +6926,9 @@ void d_ldrcc (
 )
 {
 	**address = (3 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrmi (
 	unsigned int **address,
@@ -5761,7 +6941,9 @@ void d_ldrmi (
 )
 {
 	**address = (4 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrpl (
 	unsigned int **address,
@@ -5774,7 +6956,9 @@ void d_ldrpl (
 )
 {
 	**address = (5 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrvs (
 	unsigned int **address,
@@ -5787,7 +6971,9 @@ void d_ldrvs (
 )
 {
 	**address = (6 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrvc (
 	unsigned int **address,
@@ -5800,7 +6986,9 @@ void d_ldrvc (
 )
 {
 	**address = (7 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrhi (
 	unsigned int **address,
@@ -5813,7 +7001,9 @@ void d_ldrhi (
 )
 {
 	**address = (8 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrls (
 	unsigned int **address,
@@ -5826,7 +7016,9 @@ void d_ldrls (
 )
 {
 	**address = (9 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrge (
 	unsigned int **address,
@@ -5839,7 +7031,9 @@ void d_ldrge (
 )
 {
 	**address = (10 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrlt (
 	unsigned int **address,
@@ -5852,7 +7046,9 @@ void d_ldrlt (
 )
 {
 	**address = (11 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrgt (
 	unsigned int **address,
@@ -5865,7 +7061,9 @@ void d_ldrgt (
 )
 {
 	**address = (12 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrle (
 	unsigned int **address,
@@ -5878,7 +7076,9 @@ void d_ldrle (
 )
 {
 	**address = (13 << 28) | ((1) << 26) | ((1) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldri (
 	unsigned int **address,
@@ -5891,7 +7091,9 @@ void d_ldri (
 )
 {
 	**address = (14 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrieq (
 	unsigned int **address,
@@ -5904,7 +7106,9 @@ void d_ldrieq (
 )
 {
 	**address = (0 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrine (
 	unsigned int **address,
@@ -5917,7 +7121,9 @@ void d_ldrine (
 )
 {
 	**address = (1 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrics (
 	unsigned int **address,
@@ -5930,7 +7136,9 @@ void d_ldrics (
 )
 {
 	**address = (2 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldricc (
 	unsigned int **address,
@@ -5943,7 +7151,9 @@ void d_ldricc (
 )
 {
 	**address = (3 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrimi (
 	unsigned int **address,
@@ -5956,7 +7166,9 @@ void d_ldrimi (
 )
 {
 	**address = (4 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldripl (
 	unsigned int **address,
@@ -5969,7 +7181,9 @@ void d_ldripl (
 )
 {
 	**address = (5 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrivs (
 	unsigned int **address,
@@ -5982,7 +7196,9 @@ void d_ldrivs (
 )
 {
 	**address = (6 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrivc (
 	unsigned int **address,
@@ -5995,7 +7211,9 @@ void d_ldrivc (
 )
 {
 	**address = (7 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrihi (
 	unsigned int **address,
@@ -6008,7 +7226,9 @@ void d_ldrihi (
 )
 {
 	**address = (8 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrils (
 	unsigned int **address,
@@ -6021,7 +7241,9 @@ void d_ldrils (
 )
 {
 	**address = (9 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrige (
 	unsigned int **address,
@@ -6034,7 +7256,9 @@ void d_ldrige (
 )
 {
 	**address = (10 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrilt (
 	unsigned int **address,
@@ -6047,7 +7271,9 @@ void d_ldrilt (
 )
 {
 	**address = (11 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrigt (
 	unsigned int **address,
@@ -6060,7 +7286,9 @@ void d_ldrigt (
 )
 {
 	**address = (12 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldrile (
 	unsigned int **address,
@@ -6073,7 +7301,9 @@ void d_ldrile (
 )
 {
 	**address = (13 << 28) | ((1) << 26) | ((1) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strb (
 	unsigned int **address,
@@ -6086,7 +7316,9 @@ void d_strb (
 )
 {
 	**address = (14 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbeq (
 	unsigned int **address,
@@ -6099,7 +7331,9 @@ void d_strbeq (
 )
 {
 	**address = (0 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbne (
 	unsigned int **address,
@@ -6112,7 +7346,9 @@ void d_strbne (
 )
 {
 	**address = (1 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbcs (
 	unsigned int **address,
@@ -6125,7 +7361,9 @@ void d_strbcs (
 )
 {
 	**address = (2 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbcc (
 	unsigned int **address,
@@ -6138,7 +7376,9 @@ void d_strbcc (
 )
 {
 	**address = (3 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbmi (
 	unsigned int **address,
@@ -6151,7 +7391,9 @@ void d_strbmi (
 )
 {
 	**address = (4 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbpl (
 	unsigned int **address,
@@ -6164,7 +7406,9 @@ void d_strbpl (
 )
 {
 	**address = (5 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbvs (
 	unsigned int **address,
@@ -6177,7 +7421,9 @@ void d_strbvs (
 )
 {
 	**address = (6 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbvc (
 	unsigned int **address,
@@ -6190,7 +7436,9 @@ void d_strbvc (
 )
 {
 	**address = (7 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbhi (
 	unsigned int **address,
@@ -6203,7 +7451,9 @@ void d_strbhi (
 )
 {
 	**address = (8 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbls (
 	unsigned int **address,
@@ -6216,7 +7466,9 @@ void d_strbls (
 )
 {
 	**address = (9 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbge (
 	unsigned int **address,
@@ -6229,7 +7481,9 @@ void d_strbge (
 )
 {
 	**address = (10 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strblt (
 	unsigned int **address,
@@ -6242,7 +7496,9 @@ void d_strblt (
 )
 {
 	**address = (11 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbgt (
 	unsigned int **address,
@@ -6255,7 +7511,9 @@ void d_strbgt (
 )
 {
 	**address = (12 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strble (
 	unsigned int **address,
@@ -6268,7 +7526,9 @@ void d_strble (
 )
 {
 	**address = (13 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbi (
 	unsigned int **address,
@@ -6281,7 +7541,9 @@ void d_strbi (
 )
 {
 	**address = (14 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbieq (
 	unsigned int **address,
@@ -6294,7 +7556,9 @@ void d_strbieq (
 )
 {
 	**address = (0 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbine (
 	unsigned int **address,
@@ -6307,7 +7571,9 @@ void d_strbine (
 )
 {
 	**address = (1 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbics (
 	unsigned int **address,
@@ -6320,7 +7586,9 @@ void d_strbics (
 )
 {
 	**address = (2 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbicc (
 	unsigned int **address,
@@ -6333,7 +7601,9 @@ void d_strbicc (
 )
 {
 	**address = (3 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbimi (
 	unsigned int **address,
@@ -6346,7 +7616,9 @@ void d_strbimi (
 )
 {
 	**address = (4 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbipl (
 	unsigned int **address,
@@ -6359,7 +7631,9 @@ void d_strbipl (
 )
 {
 	**address = (5 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbivs (
 	unsigned int **address,
@@ -6372,7 +7646,9 @@ void d_strbivs (
 )
 {
 	**address = (6 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbivc (
 	unsigned int **address,
@@ -6385,7 +7661,9 @@ void d_strbivc (
 )
 {
 	**address = (7 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbihi (
 	unsigned int **address,
@@ -6398,7 +7676,9 @@ void d_strbihi (
 )
 {
 	**address = (8 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbils (
 	unsigned int **address,
@@ -6411,7 +7691,9 @@ void d_strbils (
 )
 {
 	**address = (9 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbige (
 	unsigned int **address,
@@ -6424,7 +7706,9 @@ void d_strbige (
 )
 {
 	**address = (10 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbilt (
 	unsigned int **address,
@@ -6437,7 +7721,9 @@ void d_strbilt (
 )
 {
 	**address = (11 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbigt (
 	unsigned int **address,
@@ -6450,7 +7736,9 @@ void d_strbigt (
 )
 {
 	**address = (12 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strbile (
 	unsigned int **address,
@@ -6463,7 +7751,9 @@ void d_strbile (
 )
 {
 	**address = (13 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((1) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_str (
 	unsigned int **address,
@@ -6476,7 +7766,9 @@ void d_str (
 )
 {
 	**address = (14 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_streq (
 	unsigned int **address,
@@ -6489,7 +7781,9 @@ void d_streq (
 )
 {
 	**address = (0 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strne (
 	unsigned int **address,
@@ -6502,7 +7796,9 @@ void d_strne (
 )
 {
 	**address = (1 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strcs (
 	unsigned int **address,
@@ -6515,7 +7811,9 @@ void d_strcs (
 )
 {
 	**address = (2 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strcc (
 	unsigned int **address,
@@ -6528,7 +7826,9 @@ void d_strcc (
 )
 {
 	**address = (3 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strmi (
 	unsigned int **address,
@@ -6541,7 +7841,9 @@ void d_strmi (
 )
 {
 	**address = (4 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strpl (
 	unsigned int **address,
@@ -6554,7 +7856,9 @@ void d_strpl (
 )
 {
 	**address = (5 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strvs (
 	unsigned int **address,
@@ -6567,7 +7871,9 @@ void d_strvs (
 )
 {
 	**address = (6 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strvc (
 	unsigned int **address,
@@ -6580,7 +7886,9 @@ void d_strvc (
 )
 {
 	**address = (7 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strhi (
 	unsigned int **address,
@@ -6593,7 +7901,9 @@ void d_strhi (
 )
 {
 	**address = (8 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strls (
 	unsigned int **address,
@@ -6606,7 +7916,9 @@ void d_strls (
 )
 {
 	**address = (9 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strge (
 	unsigned int **address,
@@ -6619,7 +7931,9 @@ void d_strge (
 )
 {
 	**address = (10 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strlt (
 	unsigned int **address,
@@ -6632,7 +7946,9 @@ void d_strlt (
 )
 {
 	**address = (11 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strgt (
 	unsigned int **address,
@@ -6645,7 +7961,9 @@ void d_strgt (
 )
 {
 	**address = (12 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strle (
 	unsigned int **address,
@@ -6658,7 +7976,9 @@ void d_strle (
 )
 {
 	**address = (13 << 28) | ((1) << 26) | ((0) << 20) | ((0) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stri (
 	unsigned int **address,
@@ -6671,7 +7991,9 @@ void d_stri (
 )
 {
 	**address = (14 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strieq (
 	unsigned int **address,
@@ -6684,7 +8006,9 @@ void d_strieq (
 )
 {
 	**address = (0 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strine (
 	unsigned int **address,
@@ -6697,7 +8021,9 @@ void d_strine (
 )
 {
 	**address = (1 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strics (
 	unsigned int **address,
@@ -6710,7 +8036,9 @@ void d_strics (
 )
 {
 	**address = (2 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stricc (
 	unsigned int **address,
@@ -6723,7 +8051,9 @@ void d_stricc (
 )
 {
 	**address = (3 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strimi (
 	unsigned int **address,
@@ -6736,7 +8066,9 @@ void d_strimi (
 )
 {
 	**address = (4 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stripl (
 	unsigned int **address,
@@ -6749,7 +8081,9 @@ void d_stripl (
 )
 {
 	**address = (5 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strivs (
 	unsigned int **address,
@@ -6762,7 +8096,9 @@ void d_strivs (
 )
 {
 	**address = (6 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strivc (
 	unsigned int **address,
@@ -6775,7 +8111,9 @@ void d_strivc (
 )
 {
 	**address = (7 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strihi (
 	unsigned int **address,
@@ -6788,7 +8126,9 @@ void d_strihi (
 )
 {
 	**address = (8 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strils (
 	unsigned int **address,
@@ -6801,7 +8141,9 @@ void d_strils (
 )
 {
 	**address = (9 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strige (
 	unsigned int **address,
@@ -6814,7 +8156,9 @@ void d_strige (
 )
 {
 	**address = (10 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strilt (
 	unsigned int **address,
@@ -6827,7 +8171,9 @@ void d_strilt (
 )
 {
 	**address = (11 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strigt (
 	unsigned int **address,
@@ -6840,7 +8186,9 @@ void d_strigt (
 )
 {
 	**address = (12 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_strile (
 	unsigned int **address,
@@ -6853,7 +8201,9 @@ void d_strile (
 )
 {
 	**address = (13 << 28) | ((1) << 26) | ((0) << 20) | ((1) << 25) | ((0) << 22) | ((rd) << 12) | ((rn) << 16) | ((offset) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldm (
 	unsigned int **address,
@@ -6866,7 +8216,9 @@ void d_ldm (
 )
 {
 	**address = (14 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmeq (
 	unsigned int **address,
@@ -6879,7 +8231,9 @@ void d_ldmeq (
 )
 {
 	**address = (0 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmne (
 	unsigned int **address,
@@ -6892,7 +8246,9 @@ void d_ldmne (
 )
 {
 	**address = (1 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmcs (
 	unsigned int **address,
@@ -6905,7 +8261,9 @@ void d_ldmcs (
 )
 {
 	**address = (2 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmcc (
 	unsigned int **address,
@@ -6918,7 +8276,9 @@ void d_ldmcc (
 )
 {
 	**address = (3 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmmi (
 	unsigned int **address,
@@ -6931,7 +8291,9 @@ void d_ldmmi (
 )
 {
 	**address = (4 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmpl (
 	unsigned int **address,
@@ -6944,7 +8306,9 @@ void d_ldmpl (
 )
 {
 	**address = (5 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmvs (
 	unsigned int **address,
@@ -6957,7 +8321,9 @@ void d_ldmvs (
 )
 {
 	**address = (6 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmvc (
 	unsigned int **address,
@@ -6970,7 +8336,9 @@ void d_ldmvc (
 )
 {
 	**address = (7 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmhi (
 	unsigned int **address,
@@ -6983,7 +8351,9 @@ void d_ldmhi (
 )
 {
 	**address = (8 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmls (
 	unsigned int **address,
@@ -6996,7 +8366,9 @@ void d_ldmls (
 )
 {
 	**address = (9 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmge (
 	unsigned int **address,
@@ -7009,7 +8381,9 @@ void d_ldmge (
 )
 {
 	**address = (10 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmlt (
 	unsigned int **address,
@@ -7022,7 +8396,9 @@ void d_ldmlt (
 )
 {
 	**address = (11 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmgt (
 	unsigned int **address,
@@ -7035,7 +8411,9 @@ void d_ldmgt (
 )
 {
 	**address = (12 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_ldmle (
 	unsigned int **address,
@@ -7048,7 +8426,9 @@ void d_ldmle (
 )
 {
 	**address = (13 << 28) | ((4) << 25) | ((1) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stm (
 	unsigned int **address,
@@ -7061,7 +8441,9 @@ void d_stm (
 )
 {
 	**address = (14 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmeq (
 	unsigned int **address,
@@ -7074,7 +8456,9 @@ void d_stmeq (
 )
 {
 	**address = (0 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmne (
 	unsigned int **address,
@@ -7087,7 +8471,9 @@ void d_stmne (
 )
 {
 	**address = (1 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmcs (
 	unsigned int **address,
@@ -7100,7 +8486,9 @@ void d_stmcs (
 )
 {
 	**address = (2 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmcc (
 	unsigned int **address,
@@ -7113,7 +8501,9 @@ void d_stmcc (
 )
 {
 	**address = (3 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmmi (
 	unsigned int **address,
@@ -7126,7 +8516,9 @@ void d_stmmi (
 )
 {
 	**address = (4 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmpl (
 	unsigned int **address,
@@ -7139,7 +8531,9 @@ void d_stmpl (
 )
 {
 	**address = (5 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmvs (
 	unsigned int **address,
@@ -7152,7 +8546,9 @@ void d_stmvs (
 )
 {
 	**address = (6 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmvc (
 	unsigned int **address,
@@ -7165,7 +8561,9 @@ void d_stmvc (
 )
 {
 	**address = (7 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmhi (
 	unsigned int **address,
@@ -7178,7 +8576,9 @@ void d_stmhi (
 )
 {
 	**address = (8 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmls (
 	unsigned int **address,
@@ -7191,7 +8591,9 @@ void d_stmls (
 )
 {
 	**address = (9 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmge (
 	unsigned int **address,
@@ -7204,7 +8606,9 @@ void d_stmge (
 )
 {
 	**address = (10 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmlt (
 	unsigned int **address,
@@ -7217,7 +8621,9 @@ void d_stmlt (
 )
 {
 	**address = (11 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmgt (
 	unsigned int **address,
@@ -7230,7 +8636,9 @@ void d_stmgt (
 )
 {
 	**address = (12 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_stmle (
 	unsigned int **address,
@@ -7243,7 +8651,9 @@ void d_stmle (
 )
 {
 	**address = (13 << 28) | ((4) << 25) | ((0) << 20) | ((rn) << 16) | ((registers) << 0) | ((prepostindex) << 24) | ((updown) << 23) | ((writeback) << 21) | ((psr) << 22);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swi (
 	unsigned int **address,
@@ -7251,7 +8661,9 @@ void d_swi (
 )
 {
 	**address = (14 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swieq (
 	unsigned int **address,
@@ -7259,7 +8671,9 @@ void d_swieq (
 )
 {
 	**address = (0 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swine (
 	unsigned int **address,
@@ -7267,7 +8681,9 @@ void d_swine (
 )
 {
 	**address = (1 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swics (
 	unsigned int **address,
@@ -7275,7 +8691,9 @@ void d_swics (
 )
 {
 	**address = (2 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swicc (
 	unsigned int **address,
@@ -7283,7 +8701,9 @@ void d_swicc (
 )
 {
 	**address = (3 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swimi (
 	unsigned int **address,
@@ -7291,7 +8711,9 @@ void d_swimi (
 )
 {
 	**address = (4 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swipl (
 	unsigned int **address,
@@ -7299,7 +8721,9 @@ void d_swipl (
 )
 {
 	**address = (5 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swivs (
 	unsigned int **address,
@@ -7307,7 +8731,9 @@ void d_swivs (
 )
 {
 	**address = (6 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swivc (
 	unsigned int **address,
@@ -7315,7 +8741,9 @@ void d_swivc (
 )
 {
 	**address = (7 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swihi (
 	unsigned int **address,
@@ -7323,7 +8751,9 @@ void d_swihi (
 )
 {
 	**address = (8 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swils (
 	unsigned int **address,
@@ -7331,7 +8761,9 @@ void d_swils (
 )
 {
 	**address = (9 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swige (
 	unsigned int **address,
@@ -7339,7 +8771,9 @@ void d_swige (
 )
 {
 	**address = (10 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swilt (
 	unsigned int **address,
@@ -7347,7 +8781,9 @@ void d_swilt (
 )
 {
 	**address = (11 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swigt (
 	unsigned int **address,
@@ -7355,7 +8791,9 @@ void d_swigt (
 )
 {
 	**address = (12 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
 void d_swile (
 	unsigned int **address,
@@ -7363,5 +8801,7 @@ void d_swile (
 )
 {
 	**address = (13 << 28) | ((15) << 24) | ((comment) << 0);
+#ifdef PIE_AUTOINC
 	(*address)++;
+#endif
 }
